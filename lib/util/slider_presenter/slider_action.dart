@@ -1,0 +1,1 @@
+enum SliderAction { next, previous }
