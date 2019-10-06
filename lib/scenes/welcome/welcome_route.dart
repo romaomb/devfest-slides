@@ -1,8 +1,13 @@
+import 'package:devfest_slides/slider/slider_base.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeRoute extends StatelessWidget {
+class WelcomeRoute extends SlideBase {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Container());
+  Widget body() {
+    return Scaffold(
+      body: Center(
+        child: Text('Welcome'),
+      ),
+    );
   }
 }
