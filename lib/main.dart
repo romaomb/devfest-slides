@@ -1,5 +1,8 @@
 import 'dart:io';
 
+import 'package:devfest_slides/scenes/welcome/welcome_route.dart';
+import 'package:devfest_slides/slider/slider_manager.dart';
+import 'package:devfest_slides/slider/slider_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +20,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SliderProvider(
+      manager: SliderManager(),
+      child: MaterialApp(
+        theme: ThemeData(primarySwatch: Colors.orange),
+        home: WelcomeRoute(),
+      ),
+    );
   }
 }
