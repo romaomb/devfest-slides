@@ -26,6 +26,7 @@ class _SliderListenerState extends State<SliderListener> {
 
   @override
   Widget build(BuildContext context) {
+    print('build slider listener');
     return RawKeyboardListener(
       focusNode: focusNode,
       onKey: onKeyEvent,
@@ -34,6 +35,7 @@ class _SliderListenerState extends State<SliderListener> {
   }
 
   void onKeyEvent(RawKeyEvent event) {
+    print('onKeyEvent');
     if (event.runtimeType == RawKeyUpEvent && event.data.runtimeType == RawKeyEventDataMacOs) {
       final RawKeyEventDataMacOs data = event.data;
       if (data.keyCode == leftKeyCode) {

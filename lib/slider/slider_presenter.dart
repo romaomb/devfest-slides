@@ -1,8 +1,8 @@
-import 'package:devfest_slides/scenes/about/about_route.dart';
-import 'package:devfest_slides/scenes/welcome/welcome_route.dart';
 import 'package:devfest_slides/slider/slider_components.dart';
 import 'package:devfest_slides/slider/slider_listener.dart';
 import 'package:devfest_slides/slider/slider_provider.dart';
+import 'package:devfest_slides/slides/about_route.dart';
+import 'package:devfest_slides/slides/welcome_route.dart';
 import 'package:flutter/material.dart';
 
 class SliderPresenter extends StatelessWidget {

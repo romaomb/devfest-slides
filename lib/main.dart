@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:devfest_slides/scenes/welcome/welcome_route.dart';
 import 'package:devfest_slides/slider/slider_manager.dart';
 import 'package:devfest_slides/slider/slider_provider.dart';
+import 'package:devfest_slides/slides/welcome_route.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

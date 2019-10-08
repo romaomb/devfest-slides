@@ -7,6 +7,7 @@ class SliderManager {
   Slide handlerSliderAction(SliderAction action) {
     int previousSlide = currentSlideIndex;
 
+    print('called');
     if (action == SliderAction.next && currentSlideIndex < slides.length - 1) {
       currentSlideIndex++;
     } else if (action == SliderAction.previous && currentSlideIndex > 0) {
