@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AboutRoute extends SlideBase {
   @override
-  Widget body() {
+  Widget body(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Text('About'),
