@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
     return SliderProvider(
       manager: SliderManager(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.orange),
         home: WelcomeRoute(),
       ),
