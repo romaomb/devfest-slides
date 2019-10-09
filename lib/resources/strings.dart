@@ -1,7 +1,7 @@
 class Strings {
   static const welcomeTitle = 'Como utilizar código nativo em Flutter';
   static const aboutTitle = 'Um pouco sobre esse Romão';
-  static const frameworkTitle = 'Os ogros são como camadas..';
+  static const frameworkTitle = 'Os ogros são como camadas...';
   static const bridgeTitle = 'Wrapping the wrapper';
   static const asyncTitle = 'Chamadas assíncronas';
   static const channelTitle = 'Platform Channels';
