@@ -57,7 +57,7 @@ class WelcomeSlide extends SlideBase {
           alignment: Alignment.bottomCenter,
           child: Container(
             color: Colors.white,
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(13.0),
             child: Image.asset(
               Images.flutter,
               scale: 6.0,
