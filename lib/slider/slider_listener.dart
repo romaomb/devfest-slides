@@ -16,26 +16,30 @@ class SliderListener extends StatefulWidget {
 }
 
 class _SliderListenerState extends State<SliderListener> {
-  final FocusNode focusNode = FocusNode();
+  final FocusNode _focusNode = FocusNode();
 
   @override
   void dispose() {
-    focusNode.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    FocusScope.of(context).requestFocus(_focusNode);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    print('build slider listener');
     return RawKeyboardListener(
-      focusNode: focusNode,
+      focusNode: _focusNode,
       onKey: onKeyEvent,
       child: widget.child,
     );
   }
 
   void onKeyEvent(RawKeyEvent event) {
-    print('onKeyEvent');
     if (event.runtimeType == RawKeyUpEvent && event.data.runtimeType == RawKeyEventDataMacOs) {
       final RawKeyEventDataMacOs data = event.data;
       if (data.keyCode == leftKeyCode) {

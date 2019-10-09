@@ -2,7 +2,8 @@ import 'package:devfest_slides/slider/slider_presenter.dart';
 import 'package:flutter/material.dart';
 
 abstract class SlideBase extends StatelessWidget {
-  String slideTitle();
+  String title();
+
   Widget body(BuildContext context);
 
   @override
@@ -17,7 +18,7 @@ abstract class SlideBase extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  slideTitle(),
+                  title(),
                   style: TextStyle(fontSize: 60),
                   textAlign: TextAlign.center,
                 ),

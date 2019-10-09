@@ -4,9 +4,9 @@ import 'package:devfest_slides/slider/slider_base.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class WelcomeRoute extends SlideBase {
+class WelcomeSlide extends SlideBase {
   @override
-  String slideTitle() => Strings.welcomeTitle;
+  String title() => Strings.welcomeTitle;
 
   @override
   Widget body(BuildContext context) {

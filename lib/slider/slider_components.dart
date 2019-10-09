@@ -1,6 +1,9 @@
+import 'package:flutter/material.dart';
+
 enum SliderAction { next, previous }
 
-enum Slide {
-  welcome,
-  about,
+class Slide {
+  final Widget route;
+
+  Slide({this.route});
 }
