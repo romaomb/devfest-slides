@@ -1,8 +1,11 @@
 import 'package:devfest_slides/slider/slider_components.dart';
+import 'package:flutter/foundation.dart';
 
 class SliderManager {
-  final List<Slide> slides = Slide.values;
+  final List<Slide> slides;
   int currentSlideIndex = 0;
+
+  SliderManager({@required this.slides}) : assert(slides != null);
 
   Slide handlerSliderAction(SliderAction action) {
     int previousSlide = currentSlideIndex;
