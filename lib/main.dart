@@ -21,12 +21,13 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final slides = _getSlides();
     return SliderProvider(
-      manager: SliderManager(slides: _getSlides()),
+      manager: SliderManager(slides: slides),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.orange),
-        home: WelcomeSlide(),
+        home: slides[0].route,
       ),
     );
   }
