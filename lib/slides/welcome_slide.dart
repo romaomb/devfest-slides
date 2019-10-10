@@ -21,7 +21,7 @@ class WelcomeSlide extends SlideBase {
         ),
         Container(
           alignment: Alignment.topCenter,
-          padding: EdgeInsets.only(top: 110.0),
+          padding: EdgeInsets.only(top: 130.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -30,7 +30,7 @@ class WelcomeSlide extends SlideBase {
                 color: Colors.white,
                 padding: const EdgeInsets.only(
                   top: 57.0,
-                  left: 70.0,
+                  right: 20.0,
                   bottom: 40.0,
                 ),
                 child: Image.asset(
@@ -42,7 +42,7 @@ class WelcomeSlide extends SlideBase {
                 color: Colors.white,
                 padding: const EdgeInsets.only(
                   top: 20.0,
-                  right: 75.0,
+                  left: 20.0,
                   bottom: 20.0,
                 ),
                 child: Image.asset(
@@ -57,7 +57,10 @@ class WelcomeSlide extends SlideBase {
           alignment: Alignment.bottomCenter,
           child: Container(
             color: Colors.white,
-            padding: const EdgeInsets.all(13.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 5.0,
+              vertical: 20.0,
+            ),
             child: Image.asset(
               Images.flutter,
               scale: 6.0,
