@@ -2,6 +2,11 @@ import 'package:devfest_slides/slider/slider_presenter.dart';
 import 'package:flutter/material.dart';
 
 abstract class SlideBase extends StatelessWidget {
+  final int titleFlex;
+  final int bodyFlex;
+
+  SlideBase({this.titleFlex = 2, this.bodyFlex = 6});
+
   String title();
 
   Widget body(BuildContext context);
@@ -14,7 +19,7 @@ abstract class SlideBase extends StatelessWidget {
         body: Column(
           children: [
             Expanded(
-              flex: 3,
+              flex: titleFlex,
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
@@ -25,7 +30,7 @@ abstract class SlideBase extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 6,
+              flex: bodyFlex,
               child: body(context),
             )
           ],

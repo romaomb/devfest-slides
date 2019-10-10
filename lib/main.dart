@@ -15,38 +15,46 @@ void _enablePlatformOverrideForDesktop() {
 
 void main() {
   _enablePlatformOverrideForDesktop();
-  runApp(MyApp());
+
+  final slides = _getSlides();
+  final sliderManager = SliderManager(slides);
+
+  runApp(MyApp(slides, sliderManager));
+}
+
+List<Slide> _getSlides() {
+  return [
+    Slide(route: WelcomeSlide()),
+    Slide(route: AboutSlide()),
+    Slide(route: FrameworkSlide()),
+    Slide(route: BridgeSlide()),
+    Slide(route: AsyncSlide()),
+    Slide(route: ChannelSlide()),
+    Slide(route: TypesSlide()),
+    Slide(route: BinarySlide()),
+    Slide(route: MethodSlide()),
+    Slide(route: EventSlide()),
+    Slide(route: ProtobufSlide()),
+    Slide(route: DemoSlide()),
+    Slide(route: ThanksSlide()),
+  ];
 }
 
 class MyApp extends StatelessWidget {
+  final List<Slide> slides;
+  final SliderManager sliderManager;
+
+  const MyApp(this.slides, this.sliderManager);
+
   @override
   Widget build(BuildContext context) {
-    final slides = _getSlides();
     return SliderProvider(
-      manager: SliderManager(slides: slides),
+      manager: sliderManager,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.orange),
         home: slides[0].route,
       ),
     );
-  }
-
-  List<Slide> _getSlides() {
-    return [
-      Slide(route: WelcomeSlide()),
-      Slide(route: AboutSlide()),
-      Slide(route: FrameworkSlide()),
-      Slide(route: BridgeSlide()),
-      Slide(route: AsyncSlide()),
-      Slide(route: ChannelSlide()),
-      Slide(route: TypesSlide()),
-      Slide(route: BinarySlide()),
-      Slide(route: MethodSlide()),
-      Slide(route: EventSlide()),
-      Slide(route: ProtobufSlide()),
-      Slide(route: DemoSlide()),
-      Slide(route: ThanksSlide()),
-    ];
   }
 }
