@@ -9,6 +9,7 @@ class Images {
   static const framework = '$_defaultPath/framework.png';
   static const dart = '$_defaultPath/dart.png';
   static const abstractFramework = '$_defaultPath/abstract_framework.png';
+  static const platform = '$_defaultPath/platform.png';
   static const channels = '$_defaultPath/channels.png';
   static const bridge = '$_defaultPath/bridge.png';
 

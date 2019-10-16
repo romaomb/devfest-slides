@@ -17,7 +17,7 @@ class Strings {
 
   /// Captions
   static const romaoCaption = 'Why so serious?';
-  static const frameworkCaption = 'Flutter Framework';
-  static const dartCompilerCaption = 'Dart Compiler';
-  static const frameworkAbstractionCaption = 'Hackernoon abstraction';
+  static const frameworkCaption = 'Flutter framework';
+  static const dartCompilerCaption = 'Dart compiler';
+  static const frameworkAbstractionCaption = 'Flutter abstraction';
 }

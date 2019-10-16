@@ -14,11 +14,15 @@ class ChannelSlide extends SlideBase {
 
   @override
   Widget body(BuildContext context) {
-    return Column(
+    return Row(
       children: <Widget>[
         ExpandedImage(
-          scale: 1.1,
+          padding: EdgeInsets.zero,
           imagePath: Images.channels,
+        ),
+        ExpandedImage(
+          padding: EdgeInsets.zero,
+          imagePath: Images.platform,
         ),
       ],
     );
