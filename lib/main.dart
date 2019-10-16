@@ -3,23 +3,25 @@ import 'dart:io';
 import 'package:devfest_slides/slider/slider_components.dart';
 import 'package:devfest_slides/slider/slider_manager.dart';
 import 'package:devfest_slides/slider/slider_provider.dart';
-import 'package:devfest_slides/slides.dart';
+import 'package:devfest_slides/slides/slides.dart';
+import 'package:flare_flutter/flare_cache.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-void _enablePlatformOverrideForDesktop() {
-  if (!kIsWeb && (Platform.isMacOS || Platform.isWindows || Platform.isLinux)) {
-    debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
-  }
-}
-
 void main() {
   _enablePlatformOverrideForDesktop();
+  FlareCache.doesPrune = false;
 
   final slides = _getSlides();
   final sliderManager = SliderManager(slides);
 
   runApp(MyApp(slides, sliderManager));
+}
+
+void _enablePlatformOverrideForDesktop() {
+  if (!kIsWeb && (Platform.isMacOS || Platform.isWindows || Platform.isLinux)) {
+    debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  }
 }
 
 List<Slide> _getSlides() {
@@ -28,6 +30,7 @@ List<Slide> _getSlides() {
     Slide(route: AboutSlide()),
     Slide(route: FrameworkSlide()),
     Slide(route: BridgeSlide()),
+    Slide(route: ShowcaseSlide()),
     Slide(route: AsyncSlide()),
     Slide(route: ChannelSlide()),
     Slide(route: TypesSlide()),

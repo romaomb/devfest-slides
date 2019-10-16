@@ -6,28 +6,48 @@ class ExpandedImage extends StatelessWidget {
   final String imagePath;
   final double scale;
   final String caption;
+  final int flex;
+  final MainAxisAlignment alignment;
 
   const ExpandedImage({
-    this.padding,
-    this.imagePath,
+    this.padding = const EdgeInsets.all(30.0),
     this.scale = 1,
+    this.flex = 1,
+    this.alignment = MainAxisAlignment.center,
+    this.imagePath,
     this.caption,
-  });
+  }) : assert(imagePath != null);
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      flex: flex,
       child: Padding(
         padding: padding,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: alignment,
           children: [
             Image.asset(imagePath, scale: scale),
-            SizedBox(height: 20),
-            if (caption != null) Text(caption, style: Styles.textCaption),
+            if (caption != null) _Caption(caption),
           ],
         ),
       ),
+    );
+  }
+}
+
+class _Caption extends StatelessWidget {
+  final String caption;
+
+  const _Caption(this.caption);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(height: 20),
+        Text(caption, style: Styles.textCaption),
+      ],
     );
   }
 }

@@ -4,7 +4,8 @@ class Strings {
   static const aboutTitle = 'Um pouco sobre esse Romão';
   static const frameworkTitle = 'Os ogros são como as cebolas...';
   static const bridgeTitle = 'O segredo do sucesso!';
-  static const asyncTitle = 'Chamadas assíncronas';
+  static const asyncTitle = 'Vou ali e volto já';
+  static const showcaseTitle = 'Uma DEMO fala mais que mil palavras';
   static const channelTitle = 'Platform Channels';
   static const typesTitle = 'Conversão de tipos';
   static const binaryTitle = 'Mensagens binárias';

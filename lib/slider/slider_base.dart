@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 abstract class SlideBase extends StatelessWidget {
   final int titleFlex;
   final int bodyFlex;
+  final Alignment titleAlignment;
 
-  SlideBase({this.titleFlex = 2, this.bodyFlex = 6});
+  SlideBase({this.titleFlex = 2, this.bodyFlex = 6, this.titleAlignment = Alignment.center});
 
   String title();
-
+  Widget background();
   Widget body(BuildContext context);
 
   @override
@@ -16,23 +17,29 @@ abstract class SlideBase extends StatelessWidget {
     return SliderPresenter(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
+        body: Stack(
+          fit: StackFit.expand,
           children: [
-            Expanded(
-              flex: titleFlex,
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  title(),
-                  style: TextStyle(fontSize: 60),
-                  textAlign: TextAlign.center,
+            background(),
+            Column(
+              children: [
+                Expanded(
+                  flex: titleFlex,
+                  child: Align(
+                    alignment: titleAlignment,
+                    child: Text(
+                      title(),
+                      style: TextStyle(fontSize: 60),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ),
-              ),
+                Expanded(
+                  flex: bodyFlex,
+                  child: body(context),
+                )
+              ],
             ),
-            Expanded(
-              flex: bodyFlex,
-              child: body(context),
-            )
           ],
         ),
       ),

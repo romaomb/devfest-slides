@@ -5,10 +5,14 @@ import 'package:devfest_slides/slider/slider_base.dart';
 import 'package:devfest_slides/widgets/subtopic.dart';
 import 'package:devfest_slides/widgets/topic.dart';
 import 'package:devfest_slides/widgets/topic_space.dart';
+import 'package:devfest_slides/widgets/triangle_background.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AboutSlide extends SlideBase {
+  @override
+  Widget background() => TriangleBackground();
+
   @override
   String title() => Strings.aboutTitle;
 
@@ -52,7 +56,7 @@ class AboutSlide extends SlideBase {
                     Subtopic(text: 'IFBA - Técnico em Informática'),
                   ],
                 ),
-                TopicSpace(space: 40.0),
+                TopicSpace(),
                 Topic(
                   '2012: Foco na Infra',
                   subtopics: [
@@ -60,7 +64,7 @@ class AboutSlide extends SlideBase {
                     Subtopic(text: 'Gerente de T.I'),
                   ],
                 ),
-                TopicSpace(space: 40.0),
+                TopicSpace(),
                 Topic(
                   '2014: USA, USA, USA',
                   subtopics: [
@@ -68,7 +72,7 @@ class AboutSlide extends SlideBase {
                     Subtopic(text: 'Ciências da Computação - Neurociência'),
                   ],
                 ),
-                TopicSpace(space: 40.0),
+                TopicSpace(),
                 Topic(
                   '2018: Engenheiro da Computação (UNIFACS)',
                   subtopics: [
