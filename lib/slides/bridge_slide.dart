@@ -59,7 +59,7 @@ class BridgeSlide extends SlideBase {
               imagePath: Images.bridge,
               scale: 2.0,
               alignment: MainAxisAlignment.end,
-              caption: 'Javascript Bridge',
+              caption: 'Javascript bridge',
             ),
             ExpandedImage(
               flex: 2,

@@ -83,7 +83,7 @@ class AsyncSlide extends SlideBase {
         Align(
           alignment: Alignment.center,
           child: Text(
-            'Event loop (giphy)',
+            'Event loop',
             style: Styles.textCaption,
           ),
         )
