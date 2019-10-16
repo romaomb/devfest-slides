@@ -1,6 +1,7 @@
 import 'package:devfest_slides/slider/slider_components.dart';
 import 'package:devfest_slides/slider/slider_listener.dart';
 import 'package:devfest_slides/slider/slider_provider.dart';
+import 'package:devfest_slides/transition/fade_transition_route.dart';
 import 'package:flutter/material.dart';
 
 class SliderPresenter extends StatelessWidget {
@@ -19,6 +20,6 @@ class SliderPresenter extends StatelessWidget {
   void _onKeyPressed(BuildContext context, SliderAction action) {
     final manager = SliderProvider.of(context).manager;
     final nextSlide = manager.handlerSliderAction(action);
-    if (nextSlide != null) Navigator.push(context, MaterialPageRoute(builder: (_) => nextSlide.route));
+    if (nextSlide != null) Navigator.push(context, FadeTransitionRoute(builder: (_) => nextSlide.route));
   }
 }

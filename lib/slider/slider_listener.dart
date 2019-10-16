@@ -2,8 +2,8 @@ import 'package:devfest_slides/slider/slider_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-const leftKeyCode = 123;
-const rightKeyCode = 124;
+const downKeyCode = 121;
+const upKeyCode = 116;
 
 class SliderListener extends StatefulWidget {
   final Widget child;
@@ -42,9 +42,9 @@ class _SliderListenerState extends State<SliderListener> {
   void onKeyEvent(RawKeyEvent event) {
     if (event.runtimeType == RawKeyUpEvent && event.data.runtimeType == RawKeyEventDataMacOs) {
       final RawKeyEventDataMacOs data = event.data;
-      if (data.keyCode == leftKeyCode) {
+      if (data.keyCode == downKeyCode) {
         widget.onKeyPressed(SliderAction.previous);
-      } else if (data.keyCode == rightKeyCode) {
+      } else if (data.keyCode == upKeyCode) {
         widget.onKeyPressed(SliderAction.next);
       }
     }
