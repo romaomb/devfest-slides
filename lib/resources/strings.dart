@@ -7,7 +7,7 @@ class Strings {
   static const asyncTitle = 'Vou ali e volto já';
   static const showcaseTitle = 'Uma DEMO fala mais que mil palavras';
   static const channelTitle = 'Platform Channels';
-  static const typesTitle = 'Conversão de tipos';
+  static const typesTitle = 'Cada um no seu quadrado';
   static const binaryTitle = 'Mensagens binárias';
   static const methodTitle = 'Methdo Channel';
   static const eventTitle = 'Event Channel';
