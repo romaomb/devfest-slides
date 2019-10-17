@@ -17,11 +17,13 @@ class ChannelSlide extends SlideBase {
     return Row(
       children: <Widget>[
         ExpandedImage(
+          alignment: MainAxisAlignment.start,
           padding: EdgeInsets.zero,
           imagePath: Images.channels,
         ),
         ExpandedImage(
-          padding: EdgeInsets.zero,
+          alignment: MainAxisAlignment.start,
+          padding: EdgeInsets.only(top: 40.0),
           imagePath: Images.platform,
         ),
       ],

@@ -9,10 +9,9 @@ class Strings {
   static const channelTitle = 'Platform Channels';
   static const typesTitle = 'Cada um no seu quadrado';
   static const binaryTitle = 'Mensagens binárias';
-  static const methodTitle = 'Methdo Channel';
-  static const eventTitle = 'Event Channel';
+  static const methodTitle = 'Method & Event Channel';
   static const protobufTitle = 'Protobuf';
-  static const demoTitle = 'DEMO';
+  static const demoTitle = 'Mãos à massa';
   static const thanksTitle = 'Valeu essa galera!';
 
   /// Captions

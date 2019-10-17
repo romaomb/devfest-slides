@@ -36,7 +36,6 @@ List<Slide> _getSlides() {
     Slide(route: TypesSlide()),
     Slide(route: BinarySlide()),
     Slide(route: MethodSlide()),
-    Slide(route: EventSlide()),
     Slide(route: ProtobufSlide()),
     Slide(route: DemoSlide()),
     Slide(route: ThanksSlide()),
