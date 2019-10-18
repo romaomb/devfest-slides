@@ -142,7 +142,7 @@ class TypesSlide extends SlideBase {
           padding: EdgeInsets.only(top: 20.0),
           alignment: Alignment.center,
           child: Text(
-            'Tabela de conversão automática',
+            'StandardMessageCodec - Tabela de conversão automática',
             style: Styles.textCaption,
           ),
         )
