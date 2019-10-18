@@ -6,7 +6,6 @@ export 'binary_slide.dart';
 export 'bridge_slide.dart';
 export 'channel_slide.dart';
 export 'demo_slide.dart';
-export 'event_slide.dart';
 export 'framework_slide.dart';
 export 'method_slide.dart';
 export 'protobuf_slide.dart';

@@ -25,6 +25,7 @@ flutter:
     - assets/images/
     - assets/gifs/
     - assets/gallery/
+    - lib/channel/
     - developer_quest/assets/style_sphinx/
     - developer_quest/assets/images/
     - developer_quest/assets/images/2.0x/

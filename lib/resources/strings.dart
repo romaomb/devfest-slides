@@ -7,12 +7,11 @@ class Strings {
   static const asyncTitle = 'Vou ali e volto já';
   static const showcaseTitle = 'Uma DEMO fala mais que mil palavras';
   static const channelTitle = 'Platform Channels';
+  static const binaryTitle = 'Comunicação binária';
   static const typesTitle = 'Cada um no seu quadrado';
-  static const binaryTitle = 'Mensagens binárias';
-  static const methodTitle = 'Methdo Channel';
-  static const eventTitle = 'Event Channel';
-  static const protobufTitle = 'Protobuf';
-  static const demoTitle = 'DEMO';
+  static const methodTitle = 'Method Channel & Event Channel';
+  static const protobufTitle = 'Protobuf: Protocol Buffers';
+  static const demoTitle = 'Mãos à massa';
   static const thanksTitle = 'Valeu essa galera!';
 
   /// Captions

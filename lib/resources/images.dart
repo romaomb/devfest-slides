@@ -12,6 +12,10 @@ class Images {
   static const platform = '$_defaultPath/platform.png';
   static const channels = '$_defaultPath/channels.png';
   static const bridge = '$_defaultPath/bridge.png';
+  static const challenge = '$_defaultPath/challenge.png';
+  static const carrey = '$_defaultPath/carrey.jpg';
+  static const protobuf = '$_defaultPath/protobuf.png';
+  static const romaoPixel = '$_defaultPath/romao-pixel.png';
 
   /// Gallery
   static const _galleryPath = 'assets/gallery/';

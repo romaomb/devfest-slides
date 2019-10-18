@@ -1,6 +1,7 @@
 import 'package:devfest_slides/resources/images.dart';
 import 'package:devfest_slides/resources/strings.dart';
 import 'package:devfest_slides/slider/slider_base.dart';
+import 'package:devfest_slides/widgets/square_background.dart';
 import 'package:devfest_slides/widgets/triangle_background.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
@@ -19,13 +20,7 @@ class WelcomeSlide extends SlideBase {
       fit: StackFit.expand,
       children: [
         TriangleBackground(),
-        Align(
-          alignment: Alignment.bottomRight,
-          child: Image.asset(
-            Images.backgroundSquare,
-            scale: 8.0,
-          ),
-        ),
+        SquareBackground(),
       ],
     );
   }
