@@ -1,9 +1,9 @@
 import 'package:devfest_slides/resources/colors.dart';
 import 'package:devfest_slides/resources/strings.dart';
 import 'package:devfest_slides/resources/styles.dart';
-import 'package:devfest_slides/slider/slider_base.dart';
 import 'package:devfest_slides/widgets/triangle_background.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slides/flutter_slides.dart';
 
 class TypesSlide extends SlideBase {
   final halfBakedDecoration = BoxDecoration(color: CustomColors.halfBaked);
@@ -13,7 +13,7 @@ class TypesSlide extends SlideBase {
   Widget background() => TriangleBackground();
 
   @override
-  String title() => Strings.typesTitle;
+  Widget title(BuildContext context) => Text(Strings.typesTitle);
 
   @override
   Widget body(BuildContext context) {

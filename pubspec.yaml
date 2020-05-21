@@ -3,7 +3,7 @@ description:  Slides presented at DevFest Sul 2019 made in Flutter for Desktop
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.3.0 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -11,6 +11,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.5.0
   line_icons: ^0.2.0
+  flutter_slides: ^0.1.0
 
   dev_rpg:
     path: developer_quest

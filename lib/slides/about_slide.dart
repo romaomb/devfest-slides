@@ -1,12 +1,9 @@
 import 'package:devfest_slides/resources/images.dart';
 import 'package:devfest_slides/resources/strings.dart';
 import 'package:devfest_slides/resources/styles.dart';
-import 'package:devfest_slides/slider/slider_base.dart';
-import 'package:devfest_slides/widgets/subtopic.dart';
-import 'package:devfest_slides/widgets/topic.dart';
-import 'package:devfest_slides/widgets/topic_space.dart';
 import 'package:devfest_slides/widgets/triangle_background.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slides/flutter_slides.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AboutSlide extends SlideBase {
@@ -14,7 +11,7 @@ class AboutSlide extends SlideBase {
   Widget background() => TriangleBackground();
 
   @override
-  String title() => Strings.aboutTitle;
+  Widget title(BuildContext context) => Text(Strings.aboutTitle);
 
   @override
   Widget body(BuildContext context) {

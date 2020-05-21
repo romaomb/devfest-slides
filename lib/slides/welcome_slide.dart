@@ -1,9 +1,9 @@
 import 'package:devfest_slides/resources/images.dart';
 import 'package:devfest_slides/resources/strings.dart';
-import 'package:devfest_slides/slider/slider_base.dart';
 import 'package:devfest_slides/widgets/square_background.dart';
 import 'package:devfest_slides/widgets/triangle_background.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slides/flutter_slides.dart';
 import 'package:line_icons/line_icons.dart';
 
 class WelcomeSlide extends SlideBase {
@@ -11,7 +11,6 @@ class WelcomeSlide extends SlideBase {
       : super(
           titleFlex: 1,
           bodyFlex: 6,
-          titleAlignment: Alignment.bottomCenter,
         );
 
   @override
@@ -26,7 +25,7 @@ class WelcomeSlide extends SlideBase {
   }
 
   @override
-  String title() => Strings.welcomeTitle;
+  Widget title(BuildContext context) => Text(Strings.welcomeTitle);
 
   @override
   Widget body(BuildContext context) {

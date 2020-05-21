@@ -1,19 +1,17 @@
 import 'dart:io';
 
-import 'package:devfest_slides/slider/slider_components.dart';
-import 'package:devfest_slides/slider/slider_manager.dart';
-import 'package:devfest_slides/slider/slider_provider.dart';
 import 'package:devfest_slides/slides/slides.dart';
 import 'package:flare_flutter/flare_cache.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slides/flutter_slides.dart';
 
 void main() {
   _enablePlatformOverrideForDesktop();
   FlareCache.doesPrune = false;
 
   final slides = _getSlides();
-  final sliderManager = SliderManager(slides);
+  final sliderManager = SlideManager(slides);
 
   runApp(MyApp(slides, sliderManager));
 }
@@ -44,13 +42,13 @@ List<Slide> _getSlides() {
 
 class MyApp extends StatelessWidget {
   final List<Slide> slides;
-  final SliderManager sliderManager;
+  final SlideManager sliderManager;
 
   const MyApp(this.slides, this.sliderManager);
 
   @override
   Widget build(BuildContext context) {
-    return SliderProvider(
+    return SlideProvider(
       manager: sliderManager,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

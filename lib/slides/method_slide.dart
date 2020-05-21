@@ -1,16 +1,15 @@
 import 'package:devfest_slides/resources/code.dart';
 import 'package:devfest_slides/resources/strings.dart';
-import 'package:devfest_slides/slider/slider_base.dart';
 import 'package:devfest_slides/source/source_code_view.dart';
 import 'package:devfest_slides/widgets/triangle_background.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slides/flutter_slides.dart';
 
 class MethodSlide extends SlideBase {
   @override
   Widget background() => TriangleBackground();
 
-  @override
-  String title() => Strings.methodTitle;
+  Widget title(BuildContext context) => Text(Strings.methodTitle);
 
   @override
   Widget body(BuildContext context) {

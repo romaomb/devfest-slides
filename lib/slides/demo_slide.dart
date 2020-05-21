@@ -1,16 +1,16 @@
 import 'package:devfest_slides/resources/gifs.dart';
 import 'package:devfest_slides/resources/strings.dart';
 import 'package:devfest_slides/resources/styles.dart';
-import 'package:devfest_slides/slider/slider_base.dart';
 import 'package:devfest_slides/widgets/triangle_background.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slides/flutter_slides.dart';
 
 class DemoSlide extends SlideBase {
   @override
   Widget background() => TriangleBackground();
 
   @override
-  String title() => Strings.demoTitle;
+  Widget title(BuildContext context) => Text(Strings.demoTitle);
 
   @override
   Widget body(BuildContext context) {
