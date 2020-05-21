@@ -1,0 +1,3 @@
+[submodule "developer_quest"]
+	path = developer_quest
+	url = git@github.com:2d-inc/developer_quest.git

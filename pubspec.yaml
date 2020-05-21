@@ -9,6 +9,11 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
+  font_awesome_flutter: ^8.5.0
+  line_icons: ^0.2.0
+
+  dev_rpg:
+    path: developer_quest
 
 dev_dependencies:
   flutter_test:
@@ -16,3 +21,15 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/gifs/
+    - assets/gallery/
+    - lib/channel/
+    - developer_quest/assets/style_sphinx/
+    - developer_quest/assets/images/
+    - developer_quest/assets/images/2.0x/
+    - developer_quest/assets/images/3.0x/
+    - developer_quest/assets/flare/
+    - developer_quest/assets/docs/code_chomper_alpha.dart
+    - developer_quest/assets/docs/code_chomper_beta.dart
